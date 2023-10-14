@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">compass</string>
+    <string name="home">Home</string>
+    <string name="north">North</string>
+    <string name="east">East</string>
+    <string name="west">West</string>
+    <string name="south">South</string>
+    <string name="instructions">Swipe in any direction</string>
+    <string name="arrow_up">Up arrow</string>
+    <string name="arrow_left">Left arrow</string>
+    <string name="arrow_right">Right arrow</string>
+    <string name="arrow_down">Down arrow</string>
 </resources>

@@ -7,6 +7,7 @@
     tools:context=".NorthActivity">
 
     <TextView
+        android:id="@+id/east"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/east"

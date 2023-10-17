@@ -7,6 +7,7 @@
     tools:context=".NorthActivity">
 
     <TextView
+        android:id="@+id/Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/home"
@@ -19,6 +20,7 @@
         app:layout_constraintVertical_bias="0.475" />
 
     <TextView
+        android:id="@+id/prompt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/instructions"

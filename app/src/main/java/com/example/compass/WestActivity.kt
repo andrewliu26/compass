@@ -15,7 +15,6 @@ import android.view.animation.CycleInterpolator
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GestureDetectorCompat
-import java.util.Objects
 import kotlin.math.sqrt
 
 
@@ -28,17 +27,15 @@ class WestActivity : AppCompatActivity() {
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_west)
+
         gestureDetector = GestureDetectorCompat(this, SwipeGestureListener(this))
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-
-        Objects.requireNonNull(sensorManager)!!
-            .registerListener(sensorListener, sensorManager!!
-                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(sensorListener, sensorManager
+            .getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
 
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
@@ -83,14 +80,14 @@ class WestActivity : AppCompatActivity() {
         override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {}
     }
     override fun onResume() {
-        sensorManager?.registerListener(sensorListener, sensorManager!!.getDefaultSensor(
+        sensorManager.registerListener(sensorListener, sensorManager.getDefaultSensor(
             Sensor .TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL
         )
         super.onResume()
     }
 
     override fun onPause() {
-        sensorManager!!.unregisterListener(sensorListener)
+        sensorManager.unregisterListener(sensorListener)
         super.onPause()
     }
 
